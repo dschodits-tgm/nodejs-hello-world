@@ -13,7 +13,7 @@ const pkg = require('./package.json');
 // App constants
 const port = process.env.PORT || 3000;
 const apiPrefix = '/api';
-
+var randomGeneratedID = Math.random()*1000;
 // Store data in-memory, not suited for production use!
 const db = {
     test: {
@@ -55,7 +55,6 @@ const router = express.Router();
 
 // Hello World for index page
 app.get('/', function (req, res) {
-    var randomGeneratedID = Math.random()*1000;
     return res.send("Hello World! \n from Server " + randomGeneratedID);
 })
 
