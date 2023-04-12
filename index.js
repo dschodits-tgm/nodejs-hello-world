@@ -55,7 +55,8 @@ const router = express.Router();
 
 // Hello World for index page
 app.get('/', function (req, res) {
-    return res.send("Hello World!");
+    var randomGeneratedID = Math.random()*1000;
+    return res.send("Hello World! \n from Server " + randomGeneratedID);
 })
 
 app.get('/api', function (req, res) {
